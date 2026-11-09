@@ -14,10 +14,10 @@
     <style>
         /* === CORE VARIABLES === */
         :root {
-            --primary: #047857;
+            --primary: #047857; /* Emerald Green - Islami */
             --primary-dark: #064e3b;
             --secondary: #10B981;
-            --accent: #F59E0B;
+            --accent: #F59E0B; /* Gold */
             --accent-hover: #D97706;
             --bg-light: #F0FDF4;
             --text-dark: #1F2937;
@@ -151,11 +151,17 @@
             <h1>BILANGAN PECAHAN: ½ + ¼ = ¾</h1>
             <p style="color: var(--text-light); font-weight: 600; margin-bottom: 20px;">Penerapan Bilangan Pecahan di Alam Gorontalo</p>
             
+            <!-- Dynamic SVG Illustration -->
             <svg class="cover-svg" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- Danau Limboto / Teluk Tomini -->
                 <path d="M10,150 Q75,130 150,150 T290,150 L290,200 L10,200 Z" fill="#3B82F6" opacity="0.8"/>
+                <!-- Dataran / Pesisir -->
                 <path d="M0,160 Q100,120 200,150 T300,140 L300,200 L0,200 Z" fill="#10B981"/>
+                <!-- Matahari -->
                 <circle cx="250" cy="50" r="30" fill="#F59E0B" opacity="0.9"/>
+                <!-- Burung Maleo (Abstract) -->
                 <path d="M 50 140 Q 60 120 70 140" stroke="#1F2937" stroke-width="3" fill="none"/>
+                <!-- Math Elements Float -->
                 <text x="40" y="80" font-family="Poppins" font-size="28" font-weight="bold" fill="#064e3b">½</text>
                 <text x="120" y="50" font-family="Poppins" font-size="24" font-weight="bold" fill="#064e3b">0.75</text>
                 <text x="200" y="100" font-family="Poppins" font-size="26" font-weight="bold" fill="#064e3b">¾</text>
@@ -173,6 +179,7 @@
     <div id="modal-dev" class="modal-backdrop">
         <div class="modal-box text-center">
             <h2 style="color: var(--primary);">Profil Pengembang</h2>
+            <!-- Avatar with fallback -->
             <img src="https://iili.io/nvQa4ee.jpg" alt="Very Suleman" class="avatar" onerror="this.onerror=null; this.outerHTML='<div class=\'avatar\'>VS</div>';">
             <h3>Very Suleman</h3>
             <p style="color: var(--text-light); font-weight: 600; margin-bottom: 5px;">MIN 1 Boalemo</p>
@@ -235,6 +242,7 @@
         <div class="glass-card text-center">
             <h2 id="introGreeting" style="color: var(--primary);">Selamat Datang!</h2>
             <div id="introContent" style="min-height: 250px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px;">
+                <!-- Dinamis JS -->
             </div>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
                 <button class="btn btn-outline" id="btnIntroPrev" onclick="changeIntro(-1)">Kembali</button>
@@ -257,18 +265,21 @@
             <p class="text-center">Selesaikan tahap demi tahap. Menu berikutnya akan otomatis terbuka setelah kamu menuntaskan misi sebelumnya!</p>
             
             <div class="menu-grid">
+                <!-- Belajar -->
                 <div class="menu-card unlocked" onclick="enterModule('learn')">
                     <div class="lock-badge">🔓</div>
                     <div class="menu-icon">📖</div>
                     <h3>1. BELAJAR</h3>
                     <p style="font-size: 0.9rem;">15 Slide Materi Eksplorasi</p>
                 </div>
+                <!-- Bermain -->
                 <div class="menu-card locked" id="menu-play" onclick="enterModule('play')">
                     <div class="lock-badge" id="lock-play">🔒</div>
                     <div class="menu-icon">🎮</div>
                     <h3>2. BERMAIN</h3>
                     <p style="font-size: 0.9rem;">30 Tantangan Interaktif</p>
                 </div>
+                <!-- Berlatih -->
                 <div class="menu-card locked" id="menu-practice" onclick="enterModule('practice')">
                     <div class="lock-badge" id="lock-practice">🔒</div>
                     <div class="menu-icon">📝</div>
@@ -287,12 +298,17 @@
                 <span class="progress-badge" id="learnProgress">Slide 1 / 15</span>
             </div>
             
-            <div id="learnContentBody"></div>
+            <div id="learnContentBody">
+                <!-- Diisi via JS -->
+            </div>
 
+            <!-- Kuis Interaktif Bawah Slide -->
             <div class="content-section" style="background: #f8fafc; margin-top: 20px; border-left-color: var(--accent);">
                 <h3 style="color: var(--accent); font-size: 1.1rem; margin-bottom: 10px;">Tantangan Cepat:</h3>
                 <p id="learnQuizQ" style="font-weight: 600;"></p>
-                <div class="options-grid" id="learnQuizOptions"></div>
+                <div class="options-grid" id="learnQuizOptions">
+                    <!-- Diisi via JS -->
+                </div>
             </div>
 
             <div style="display: flex; justify-content: flex-end; margin-top: 20px;">
@@ -309,7 +325,9 @@
                 <span class="progress-badge" style="background: var(--accent);" id="playProgress">Tantangan 1 / 30</span>
             </div>
             
-            <div id="playContentBody"></div>
+            <div id="playContentBody">
+                <!-- Diisi via JS -->
+            </div>
 
             <div style="display: flex; justify-content: flex-end; margin-top: 25px;">
                 <button class="btn btn-primary" id="btnPlayNext" onclick="nextPlaySlide()" style="display: none;">Lanjut Tantangan ➔</button>
@@ -330,7 +348,9 @@
                 <span>Bobot: <span id="practiceWeight">8</span> Poin</span>
             </div>
 
-            <div id="practiceContentBody"></div>
+            <div id="practiceContentBody">
+                <!-- Diisi via JS -->
+            </div>
 
             <div style="display: flex; justify-content: flex-end; margin-top: 25px;">
                 <button class="btn btn-primary" id="btnPracticeNext" onclick="nextPracticeSlide()" style="display: none;">Simpan & Lanjut ➔</button>
@@ -342,6 +362,7 @@
     <div id="screen-report" class="screen fade-out" style="background: #e5e7eb;">
         <div class="glass-card" id="pdfArea" style="background: white; border-radius: 0; box-shadow: 0 0 20px rgba(0,0,0,0.1); padding: 40px; max-width: 800px;">
             
+            <!-- KOP LAPORAN -->
             <div class="report-header">
                 <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
                     <img src="https://iili.io/n6nCll1.png" alt="Logo Kemenag" style="width: 80px; height: auto; object-fit: contain;" onerror="this.style.display='none'">
@@ -353,34 +374,63 @@
                 </div>
             </div>
 
+            <!-- DATA SISWA -->
             <table class="table-custom">
-                <tr><td width="30%"><strong>Nama Peserta Didik</strong></td><td id="repName"></td></tr>
-                <tr><td><strong>Kelas</strong></td><td id="repClass"></td></tr>
-                <tr><td><strong>Tanggal Pengerjaan</strong></td><td id="repDate"></td></tr>
+                <tr>
+                    <td width="30%"><strong>Nama Peserta Didik</strong></td>
+                    <td id="repName"></td>
+                </tr>
+                <tr>
+                    <td><strong>Kelas</strong></td>
+                    <td id="repClass"></td>
+                </tr>
+                <tr>
+                    <td><strong>Tanggal Pengerjaan</strong></td>
+                    <td id="repDate"></td>
+                </tr>
             </table>
 
+            <!-- HASIL PERFORMA -->
             <h3 style="color: var(--primary); margin-top: 25px;">Rekapitulasi Performa</h3>
             <table class="table-custom">
-                <tr><th>Aspek Penilaian</th><th>Skor / Persentase</th><th>Keterangan</th></tr>
-                <tr><td>Zona Bermain (Gamifikasi Literasi)</td><td id="repPlayScore"></td><td>Tingkat akurasi tantangan.</td></tr>
-                <tr><td>Asesmen Berlatih (Evaluasi)</td><td id="repPracticeScore" style="font-weight: bold; font-size: 1.1rem;"></td><td id="repPredikat" style="font-weight: bold;"></td></tr>
+                <tr>
+                    <th>Aspek Penilaian</th>
+                    <th>Skor / Persentase</th>
+                    <th>Keterangan</th>
+                </tr>
+                <tr>
+                    <td>Zona Bermain (Gamifikasi Literasi)</td>
+                    <td id="repPlayScore"></td>
+                    <td>Tingkat akurasi tantangan.</td>
+                </tr>
+                <tr>
+                    <td>Asesmen Berlatih (Evaluasi)</td>
+                    <td id="repPracticeScore" style="font-weight: bold; font-size: 1.1rem;"></td>
+                    <td id="repPredikat" style="font-weight: bold;"></td>
+                </tr>
             </table>
 
+            <!-- SOAL SALAH & PEMBAHASAN -->
             <div id="repIncorrectAnswers"></div>
 
+            <!-- CATATAN KBC -->
             <h3 style="color: var(--primary); margin-top: 25px;">Catatan Kurikulum Berbasis Cinta (KBC)</h3>
             <div class="kbc-box" style="background: #f0fdf4; border-color: var(--primary);">
-                <p style="margin:0;">Peserta didik telah menuntaskan pembelajaran yang mengintegrasikan nilai-nilai <strong>Cinta kepada Allah</strong>, <strong>Cinta Alam</strong>, serta <strong>Cinta Sesama</strong>.</p>
+                <p style="margin:0;">Peserta didik telah menuntaskan pembelajaran yang mengintegrasikan nilai-nilai <strong>Cinta kepada Allah</strong> (mensyukuri keakuratan ukuran alam semesta), <strong>Cinta Alam</strong> (melalui studi kasus Danau Limboto & satwa Gorontalo), serta <strong>Cinta Sesama</strong> (berbagi adil).</p>
             </div>
 
+            <!-- SIGNATURE -->
             <div style="margin-top: 40px; display: flex; justify-content: space-between; padding: 0 20px;">
                 <div style="text-align: center;">
-                    <p>Mengetahui,</p><p>Orang Tua / Wali Siswa</p>
+                    <p>Mengetahui,</p>
+                    <p>Orang Tua / Wali Siswa</p>
                     <p style="margin-top: 70px; font-weight: bold;">( .................................... )</p>
                 </div>
                 <div style="text-align: center;">
-                    <p>Boalemo, <span id="repSignDate"></span></p><p>Guru Mata Pelajaran</p>
-                    <p style="margin-top: 70px; font-weight: bold; text-decoration: underline;">Very Suleman</p><p>NIP. 199402022019031011</p>
+                    <p>Boalemo, <span id="repSignDate"></span></p>
+                    <p>Guru Mata Pelajaran</p>
+                    <p style="margin-top: 70px; font-weight: bold; text-decoration: underline;">Very Suleman</p>
+                    <p>NIP. 199402022019031011</p>
                 </div>
             </div>
         </div>
@@ -391,15 +441,14 @@
         </div>
     </div>
 
+
     <!-- ========================================== -->
     <!-- JAVASCRIPT LOGIC & DATA                    -->
     <!-- ========================================== -->
     <script>
-        /* ==========================================
-           KONFIGURASI GOOGLE APPS SCRIPT
-           Masukkan URL Web App dari Apps Script di bawah ini
-           ========================================== */
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbxRa4J7NtSz2oUOw0teLuYOyNyd_rDi2lHPrr7Hs1wCXpWB-MZD8fjkRzjvPUm1CbWy3A/exec"; 
+        /* === KONFIGURASI GOOGLE APPS SCRIPT === */
+        // Ganti URL di bawah ini dengan URL Web App dari Google Apps Script Anda
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbxRa4J7NtSz2oUOw0teLuYOyNyd_rDi2lHPrr7Hs1wCXpWB-MZD8fjkRzjvPUm1CbWy3A/exec";
 
         /* === STATE MANAGEMENT === */
         const state = {
@@ -411,14 +460,16 @@
             currentPracticePoints: 0,
             currentPracticeSelected: null,
             incorrectPractice: [],
-            allPracticeAnswers: [] // Tambahan untuk GAS: melacak semua jawaban
+            practiceHistory: [] // Menyimpan seluruh rekam jejak jawaban siswa
         };
 
+        /* === UI UTILS === */
         function navTo(screenId) {
             document.querySelectorAll('.screen').forEach(s => s.classList.add('fade-out'));
             const target = document.getElementById(screenId);
             target.classList.remove('fade-out');
             target.scrollTop = 0;
+            
             if(screenId === 'screen-dashboard') updateDashboard();
         }
 
@@ -435,47 +486,93 @@
             setTimeout(() => toast.classList.remove('show'), 3000);
         }
 
-        window.onload = () => { setTimeout(() => { navTo('screen-cover'); }, 1800); };
+        /* === INITIALIZATION === */
+        window.onload = () => {
+            setTimeout(() => {
+                navTo('screen-cover');
+            }, 1800);
+        };
 
+        /* === FORM LOGIC === */
         function processForm() {
             const name = document.getElementById('studentName').value.trim();
             const cls = document.getElementById('studentClass').value;
-            if(!name || !cls) { showToast("Mohon lengkapi Nama dan Kelas terlebih dahulu!", false); return; }
-            state.student.name = name; state.student.class = cls;
+            
+            if(!name || !cls) {
+                showToast("Mohon lengkapi Nama dan Kelas terlebih dahulu!", false);
+                return;
+            }
+            
+            state.student.name = name;
+            state.student.class = cls;
+            
             document.getElementById('introGreeting').innerText = `Selamat Datang, ${name}!`;
             document.getElementById('dashStudentInfo').innerText = `${name} | ${cls}`;
-            initIntro(); navTo('screen-intro');
+            
+            initIntro();
+            navTo('screen-intro');
         }
 
+        /* === INTRO SLIDER === */
         const introData = [
-            { icon: '📖', title: 'Modul Belajar', text: 'Pelajari konsep pecahan dengan cerita ekosistem Gorontalo.' },
-            { icon: '🎮', title: 'Zona Bermain', text: 'Selesaikan 30 tantangan seru berbasis literasi dan numerasi.' },
-            { icon: '📝', title: 'Asesmen Berlatih', text: 'Uji kemampuanmu dengan 15 soal berjenjang. Cetak rapor di akhir.' }
+            { icon: '📖', title: 'Modul Belajar', text: 'Pelajari konsep pecahan dengan cerita ekosistem Gorontalo. Baca materinya, dan kerjakan tantangan di bawah tiap slide.' },
+            { icon: '🎮', title: 'Zona Bermain', text: 'Selesaikan 30 tantangan seru berbasis literasi dan numerasi. Kumpulkan poin sebanyak-banyaknya!' },
+            { icon: '📝', title: 'Asesmen Berlatih', text: 'Uji kemampuanmu dengan 15 soal berjenjang. Cetak rapor hasil belajarmu di akhir sesi sebagai bukti ketuntasan.' }
         ];
         let introIdx = 0;
 
-        function initIntro() { renderIntro(); }
+        function initIntro() {
+            renderIntro();
+        }
+
         function renderIntro() {
             const container = document.getElementById('introContent');
             const data = introData[introIdx];
-            container.innerHTML = `<div style="font-size: 4rem; margin-bottom: 15px;">${data.icon}</div><h3 style="color: var(--primary-dark);">${data.title}</h3><p style="color: var(--text-dark);">${data.text}</p>`;
+            container.innerHTML = `
+                <div style="font-size: 4rem; margin-bottom: 15px;">${data.icon}</div>
+                <h3 style="color: var(--primary-dark);">${data.title}</h3>
+                <p style="color: var(--text-dark);">${data.text}</p>
+            `;
+            
             const dots = document.getElementById('introDots');
             dots.innerHTML = introData.map((_, i) => `<div style="width:10px; height:10px; border-radius:50%; background:${i === introIdx ? 'var(--primary)' : '#d1d5db'}"></div>`).join('');
+            
             document.getElementById('btnIntroPrev').style.visibility = introIdx === 0 ? 'hidden' : 'visible';
             const btnNext = document.getElementById('btnIntroNext');
-            if(introIdx === introData.length - 1) { btnNext.innerText = "Masuk Menu Utama 🚀"; btnNext.classList.replace('btn-primary', 'btn-accent'); } 
-            else { btnNext.innerText = "Selanjutnya ➔"; btnNext.classList.replace('btn-accent', 'btn-primary'); }
-        }
-        function changeIntro(dir) {
-            if(dir === 1 && introIdx === introData.length - 1) { navTo('screen-dashboard'); return; }
-            introIdx += dir; renderIntro();
+            
+            if(introIdx === introData.length - 1) {
+                btnNext.innerText = "Masuk Menu Utama 🚀";
+                btnNext.classList.replace('btn-primary', 'btn-accent');
+            } else {
+                btnNext.innerText = "Selanjutnya ➔";
+                btnNext.classList.replace('btn-accent', 'btn-primary');
+            }
         }
 
+        function changeIntro(dir) {
+            if(dir === 1 && introIdx === introData.length - 1) {
+                navTo('screen-dashboard');
+                return;
+            }
+            introIdx += dir;
+            renderIntro();
+        }
+
+        /* === DASHBOARD LOGIC === */
         function updateDashboard() {
-            const playCard = document.getElementById('menu-play'); const lockPlay = document.getElementById('lock-play');
-            if(state.unlocked.play) { playCard.classList.replace('locked', 'unlocked'); lockPlay.innerText = '🔓'; }
-            const pracCard = document.getElementById('menu-practice'); const lockPrac = document.getElementById('lock-practice');
-            if(state.unlocked.practice) { pracCard.classList.replace('locked', 'unlocked'); lockPrac.innerText = '🔓'; }
+            const playCard = document.getElementById('menu-play');
+            const lockPlay = document.getElementById('lock-play');
+            if(state.unlocked.play) {
+                playCard.classList.replace('locked', 'unlocked');
+                lockPlay.innerText = '🔓';
+            }
+            
+            const pracCard = document.getElementById('menu-practice');
+            const lockPrac = document.getElementById('lock-practice');
+            if(state.unlocked.practice) {
+                pracCard.classList.replace('locked', 'unlocked');
+                lockPrac.innerText = '🔓';
+            }
         }
 
         function enterModule(type) {
@@ -490,136 +587,311 @@
             }
         }
 
+        /* === DATA: BELAJAR (15 Slides) === */
         const learnData = [
-            { title: "1. Mengenal Pecahan", content: "Pecahan menunjukkan bagian dari keseluruhan. Di pesisir Teluk Tomini...", kbc: "Berbagi hasil laut secara adil adalah wujud kasih sayang.", ayah: "وَخَلَقَ كُلَّ شَيْءٍ فَقَدَّرَهُ تَقْدِيرًا", trans: "\"Dan Dia telah menciptakan segala sesuatu...\"", quiz: { q: "Pada pecahan 3/5, angka 5 disebut?", opts: ["Pembilang", "Penyebut", "Hasil bagi", "Sisa bagi"], ans: 1 } },
-            { title: "2. Pecahan Senilai", content: "Dua pecahan disebut senilai jika nilainya sama meski angkanya berbeda...", kbc: "Keadilan tidak selalu terlihat sama, namun nilainya setara di mata Allah.", ayah: "إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ", trans: "\"Sesungguhnya Allah menyuruh berlaku adil...\"", quiz: { q: "Pecahan yang senilai dengan 1/3 adalah?", opts: ["2/6", "3/8", "2/5", "4/9"], ans: 0 } },
-            { title: "3. Menyederhanakan Pecahan", content: "Untuk melestarikan burung Maleo, 4 dari 12 butir telur berhasil ditetaskan...", kbc: "Menjaga satwa langka adalah wujud syukur.", ayah: "وَمَا مِن دَابَّةٍ فِي الْأَرْضِ إِلَّا عَلَى اللَّهِ رِزْقُهَا", trans: "\"Dan tidak ada suatu binatang melatapun...\"", quiz: { q: "Bentuk sederhana dari 6/8 adalah?", opts: ["1/2", "3/4", "2/3", "1/4"], ans: 1 } },
-            { title: "4. Mengenal Pecahan Biasa & Campuran", content: "Pecahan 5/2 disebut pecahan biasa tidak murni. Diubah menjadi 2 1/2...", kbc: "Bekerja keras dalam bertani adalah ibadah.", ayah: "هُوَ الَّذِي جَعَلَ لَكُمُ الْأَرْضَ ذَلُولًا فَامْشُوا فِي مَنَاكِبِهَا", trans: "\"Dialah Yang menjadikan bumi itu mudah bagi kamu...\"", quiz: { q: "Bentuk pecahan campuran dari 7/3 adalah?", opts: ["2 1/3", "1 4/3", "3 1/3", "2 2/3"], ans: 0 } },
-            { title: "5. Mengubah Pecahan Campuran ke Biasa", content: "Ibu membeli 3 1/4 kg gula aren. Diubah jadi biasa (3x4)+1 = 13/4...", kbc: "Ketepatan takaran menjamin keberkahan.", ayah: "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا بِالْقِسْطَاسِ الْمُسْتَقِيمِ", trans: "\"Dan sempurnakanlah takaran apabila kamu menakar...\"", quiz: { q: "Pecahan biasa dari 2 2/5 adalah?", opts: ["10/5", "12/5", "7/5", "14/5"], ans: 1 } },
-            { title: "6. Bilangan Desimal (Persepuluhan)", content: "Kedalaman Danau Limboto 1,5 meter. Desimal berarti persepuluhan (5/10)...", kbc: "Merawat alam adalah wujud cinta lingkungan.", ayah: "ظَهَرَ الْفَسَادُ فِي الْبَرِّ وَالْبَحْرِ...", trans: "\"Telah tampak kerusakan di darat dan di laut...\"", quiz: { q: "Bentuk pecahan dari 0,8 adalah?", opts: ["8/10", "8/100", "8/1000", "8/1"], ans: 0 } },
-            { title: "7. Bilangan Desimal (Perseratusan)", content: "0,25 berarti perseratusan (25/100)...", kbc: "Melindungi pesisir dengan mangrove adalah amal jariyah.", ayah: "وَلَا تُفْسِدُوا فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا", trans: "\"Dan janganlah kamu berbuat kerusakan di bumi...\"", quiz: { q: "0,75 senilai dengan pecahan...", opts: ["1/4", "3/4", "1/2", "2/4"], ans: 1 } },
-            { title: "8. Membandingkan Pecahan (Penyebut Sama)", content: "Penyebut sama, bandingkan pembilangnya. 4/5 > 3/5...", kbc: "Bersyukur atas rezeki adalah wujud cinta.", ayah: "لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ", trans: "\"Sesungguhnya jika kamu bersyukur...\"", quiz: { q: "Manakah yang benar?", opts: ["2/7 > 5/7", "5/7 > 2/7", "2/7 = 5/7", "5/7 < 2/7"], ans: 1 } },
-            { title: "9. Membandingkan Pecahan (Penyebut Beda)", content: "Samakan penyebut dengan KPK...", kbc: "Menghargai keberagaman hasil bumi.", ayah: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ...", trans: "\"Allah akan meninggikan orang-orang yang beriman...\"", quiz: { q: "Bandingkan 1/4 dan 1/5!", opts: ["1/4 < 1/5", "1/4 > 1/5", "1/4 = 1/5", "Tidak bisa dibandingkan"], ans: 1 } },
-            { title: "10. Penjumlahan Pecahan (Penyebut Sama)", content: "2/7 + 3/7 = 5/7. Jika penyebut sama, jumlahkan pembilang.", kbc: "Gotong royong (Ta'awun) dalam kebaikan.", ayah: "وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ...", trans: "\"Dan tolong-menolonglah kamu dalam kebajikan...\"", quiz: { q: "Hasil dari 3/8 + 4/8 adalah?", opts: ["7/16", "1/8", "7/8", "12/8"], ans: 2 } },
-            { title: "11. Penjumlahan Pecahan (Penyebut Beda)", content: "1/2 + 1/4 = 2/4 + 1/4 = 3/4.", kbc: "Keselamatan nyawa dalam bekerja adalah prioritas.", ayah: "وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ", trans: "\"...janganlah kamu menjatuhkan dirimu ke kebinasaan...\"", quiz: { q: "Hasil 1/3 + 1/6 adalah?", opts: ["2/9", "3/6 (atau 1/2)", "1/18", "4/6"], ans: 1 } },
-            { title: "12. Pengurangan Pecahan", content: "7/8 - 3/8 = 4/8 disederhanakan jadi 1/2.", kbc: "Kebersihan adalah wujud cinta.", ayah: "إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ", trans: "\"Sesungguhnya Allah menyukai orang-orang yang bertaubat...\"", quiz: { q: "Hasil 5/6 - 2/6 disederhanakan menjadi?", opts: ["3/6", "1/2", "2/6", "4/6"], ans: 1 } },
-            { title: "13. Perkalian Pecahan", content: "Atas kali atas, bawah kali bawah. 1/2 x 3/4 = 3/8.", kbc: "Menunaikan zakat membersihkan harta.", ayah: "وَآتُوا حَقَّهُ يَوْمَ حَصَادِهِ", trans: "\"Dan berikanlah haknya pada waktu memetik hasilnya.\"", quiz: { q: "Hasil 2/3 x 4/5 adalah?", opts: ["8/15", "6/8", "8/8", "10/15"], ans: 0 } },
-            { title: "14. Pembagian Pecahan", content: "Balik pecahan kedua lalu kalikan. 3/4 : 1/8 = 3/4 x 8/1 = 6.", kbc: "Berbagi mendukung kesejahteraan bersama.", ayah: "كَيْ لَا يَكُونَ دُولَةً بَيْنَ الْأَغْنِيَاءِ مِنكُمْ", trans: "\"...supaya harta itu jangan beredar di antara orang-orang kaya saja...\"", quiz: { q: "Hasil 1/2 : 1/4 adalah?", opts: ["1/8", "2", "4", "1/2"], ans: 1 } },
-            { title: "15. Evaluasi Konsep Desimal", content: "0,5 + 0,2 = 0,7. Atau 5/10 + 2/10 = 7/10.", kbc: "Cinta ilmu pengetahuan mengantarkan kebijaksanaan.", ayah: "يُؤْتِي الْحِكْمَةَ مَن يَشَاءُ...", trans: "\"Allah menganugerahkan al hikmah kepada siapa yang dikehendaki-Nya...\"", quiz: { q: "Hasil penjumlahan desimal 1,2 + 0,4 adalah?", opts: ["1,6", "0,16", "2,4", "1,24"], ans: 0 } }
+            {
+                title: "1. Mengenal Pecahan",
+                content: "Pecahan menunjukkan bagian dari keseluruhan. Di pesisir Teluk Tomini, nelayan sering membagi hasil tangkapan. Jika 1 keranjang ikan dibagi rata ke 4 keluarga, tiap keluarga mendapat 1/4 bagian. Angka 1 disebut <b>pembilang</b> (bagian yang diambil) dan 4 disebut <b>penyebut</b> (total bagian).<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Tentukan pembilang dan penyebut dari pecahan 2/7.<br><strong>Pembahasan:</strong> Pada pecahan 2/7, angka 2 adalah pembilang (atas) dan angka 7 adalah penyebut (bawah).</div>",
+                kbc: "Berbagi hasil laut secara adil adalah wujud kasih sayang kepada sesama manusia.",
+                ayah: "وَخَلَقَ كُلَّ شَيْءٍ فَقَدَّرَهُ تَقْدِيرًا",
+                trans: "\"Dan Dia telah menciptakan segala sesuatu, dan Dia menetapkan ukuran-ukurannya...\" (QS. Al-Furqan: 2)",
+                quiz: { q: "Pada pecahan 3/5, angka 5 disebut?", opts: ["Pembilang", "Penyebut", "Hasil bagi", "Sisa bagi"], ans: 1 }
+            },
+            {
+                title: "2. Pecahan Senilai",
+                content: "Dua pecahan disebut senilai jika nilainya sama meski angkanya berbeda. Contoh, lahan jagung di Gorontalo seluas 1/2 hektar sama luasnya dengan 2/4 hektar atau 4/8 hektar. Kita bisa mendapatkannya dengan mengalikan atau membagi pembilang dan penyebut dengan angka yang sama.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Carilah pecahan yang senilai dengan 2/3.<br><strong>Pembahasan:</strong> Kalikan pembilang dan penyebut dengan angka yang sama (misal 2). 2 x 2 = 4, 3 x 2 = 6. Maka 2/3 senilai dengan 4/6.</div>",
+                kbc: "Keadilan tidak selalu terlihat sama, namun nilainya setara di mata Allah jika niatnya lurus.",
+                ayah: "إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ",
+                trans: "\"Sesungguhnya Allah menyuruh (kamu) berlaku adil dan berbuat kebajikan.\" (QS. An-Nahl: 90)",
+                quiz: { q: "Pecahan yang senilai dengan 1/3 adalah?", opts: ["2/6", "3/8", "2/5", "4/9"], ans: 0 }
+            },
+            {
+                title: "3. Menyederhanakan Pecahan",
+                content: "Untuk melestarikan burung Maleo, 4 dari 12 butir telur berhasil ditetaskan hari ini (4/12). Pecahan ini bisa disederhanakan dengan membagi pembilang dan penyebut dengan angka yang sama (FPB). 4:4=1, dan 12:4=3. Jadi, 4/12 sama dengan 1/3.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Sederhanakan pecahan 8/12.<br><strong>Pembahasan:</strong> FPB dari 8 dan 12 adalah 4. Bagi pembilang dan penyebut dengan 4 (8:4 = 2, 12:4 = 3). Hasilnya 2/3.</div>",
+                kbc: "Menjaga satwa langka seperti Burung Maleo adalah wujud syukur menjaga amanah ciptaan Allah.",
+                ayah: "وَمَا مِن دَابَّةٍ فِي الْأَرْضِ إِلَّا عَلَى اللَّهِ رِزْقُهَا",
+                trans: "\"Dan tidak ada suatu binatang melatapun di bumi melainkan Allah-lah yang memberi rezekinya.\" (QS. Hud: 6)",
+                quiz: { q: "Bentuk sederhana dari 6/8 adalah?", opts: ["1/2", "3/4", "2/3", "1/4"], ans: 1 }
+            },
+            {
+                title: "4. Mengenal Pecahan Biasa & Campuran",
+                content: "Saat musim panen di dataran agraris Suwawa, Pak Budi memanen 5/2 karung padi. Pecahan 5/2 (pembilang > penyebut) disebut pecahan biasa tidak murni. Kita bisa mengubahnya menjadi pecahan campuran: 5 dibagi 2 adalah 2 sisa 1, sehingga ditulis 2 1/2 karung.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Ubah 8/3 menjadi pecahan campuran.<br><strong>Pembahasan:</strong> 8 dibagi 3 hasilnya 2 sisa 2. Maka ditulis sebagai pecahan campuran 2 2/3.</div>",
+                kbc: "Bekerja keras dalam bertani adalah ibadah yang disukai Allah.",
+                ayah: "هُوَ الَّذِي جَعَلَ لَكُمُ الْأَرْضَ ذَلُولًا فَامْشُوا فِي مَنَاكِبِهَا",
+                trans: "\"Dialah Yang menjadikan bumi itu mudah bagi kamu, maka berjalanlah di segala penjurunya...\" (QS. Al-Mulk: 15)",
+                quiz: { q: "Bentuk pecahan campuran dari 7/3 adalah?", opts: ["2 1/3", "1 4/3", "3 1/3", "2 2/3"], ans: 0 }
+            },
+            {
+                title: "5. Mengubah Pecahan Campuran ke Biasa",
+                content: "Ibu membeli 3 1/4 kg gula aren khas Gorontalo untuk membuat kue. Untuk menghitung total dalam pecahan biasa: kalikan bilangan bulat (3) dengan penyebut (4) lalu tambah pembilang (1). (3x4)+1 = 13. Jadi, 3 1/4 = 13/4.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Ubah 2 1/5 menjadi pecahan biasa.<br><strong>Pembahasan:</strong> Kalikan bilangan bulat dengan penyebut, lalu tambah pembilang: (2 x 5) + 1 = 11. Maka hasilnya 11/5.</div>",
+                kbc: "Ketepatan takaran dalam jual beli menjamin keberkahan dan mencerminkan cinta kejujuran.",
+                ayah: "وَأَوْفُوا الْكَيْلَ إِذَا كِلْتُمْ وَزِنُوا بِالْقِسْطَاسِ الْمُسْتَقِيمِ",
+                trans: "\"Dan sempurnakanlah takaran apabila kamu menakar, dan timbanglah dengan neraca yang benar.\" (QS. Al-Isra: 35)",
+                quiz: { q: "Pecahan biasa dari 2 2/5 adalah?", opts: ["10/5", "12/5", "7/5", "14/5"], ans: 1 }
+            },
+            {
+                title: "6. Bilangan Desimal (Persepuluhan)",
+                content: "Kedalaman Danau Limboto menyusut. Dulu sangat dalam, kini di beberapa titik hanya 1,5 meter. Angka 1,5 adalah bilangan desimal. Angka di belakang koma menunjukkan persepuluhan (5/10). Jadi 1,5 sama dengan 1 5/10 atau 1 1/2.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Ubah 3,2 ke bentuk pecahan.<br><strong>Pembahasan:</strong> Angka 3,2 memiliki 1 angka di belakang koma yang berarti persepuluh. Maka ditulis 32/10 atau disederhanakan menjadi 16/5.</div>",
+                kbc: "Danau yang menyusut adalah teguran alam. Merawatnya adalah wujud cinta lingkungan.",
+                ayah: "ظَهَرَ الْفَسَادُ فِي الْبَرِّ وَالْبَحْرِ...",
+                trans: "\"Telah tampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusia...\" (QS. Ar-Rum: 41)",
+                quiz: { q: "Bentuk pecahan dari 0,8 adalah?", opts: ["8/10", "8/100", "8/1000", "8/1"], ans: 0 }
+            },
+            {
+                title: "7. Bilangan Desimal (Perseratusan)",
+                content: "Tim konservasi mencatat bahwa luas hutan mangrove yang rusak adalah 0,25 hektar. Dua angka di belakang koma berarti perseratusan (25/100). Hutan mangrove melindungi pesisir Gorontalo dari abrasi dan menjadi rumah bagi kepiting dan ikan kecil.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Ubah 0,45 ke bentuk pecahan.<br><strong>Pembahasan:</strong> Angka 0,45 memiliki 2 angka di belakang koma (perseratus). Maka ditulis 45/100 atau disederhanakan menjadi 9/20.</div>",
+                kbc: "Melindungi pesisir dengan mangrove adalah amal jariyah bagi manusia dan hewan.",
+                ayah: "وَلَا تُفْسِدُوا فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا",
+                trans: "\"Dan janganlah kamu berbuat kerusakan di bumi setelah (diciptakan) dengan baik...\" (QS. Al-A'raf: 56)",
+                quiz: { q: "0,75 senilai dengan pecahan...", opts: ["1/4", "3/4", "1/2", "2/4"], ans: 1 }
+            },
+            {
+                title: "8. Membandingkan Pecahan (Penyebut Sama)",
+                content: "Dua kelompok nelayan menangkap ikan. Kelompok A mendapat 3/5 ton, Kelompok B mendapat 4/5 ton. Karena penyebutnya sama (5), kita bandingkan pembilangnya. 4 lebih besar dari 3. Maka, tangkapan B lebih banyak (3/5 < 4/5).<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Bandingkan 4/7 dan 2/7.<br><strong>Pembahasan:</strong> Karena penyebutnya sama (7) dan pembilang 4 > 2, maka 4/7 > 2/7.</div>",
+                kbc: "Rezeki Allah luas. Bersyukur atas rezeki sedikit maupun banyak adalah wujud cinta kepada Sang Pemberi.",
+                ayah: "لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ",
+                trans: "\"Sesungguhnya jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu...\" (QS. Ibrahim: 7)",
+                quiz: { q: "Manakah yang benar?", opts: ["2/7 > 5/7", "5/7 > 2/7", "2/7 = 5/7", "5/7 < 2/7"], ans: 1 }
+            },
+            {
+                title: "9. Membandingkan Pecahan (Penyebut Beda)",
+                content: "Ladang padi seluas 1/2 hektar dan ladang jagung 1/3 hektar. Mana yang lebih luas? Samakan dulu penyebutnya menggunakan KPK (6). 1/2 menjadi 3/6, dan 1/3 menjadi 2/6. Karena 3/6 > 2/6, maka lahan padi (1/2) lebih luas.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Bandingkan 2/3 dan 3/4.<br><strong>Pembahasan:</strong> Samakan penyebut jadi 12. 2/3 = 8/12 dan 3/4 = 9/12. Karena 8 < 9, maka 2/3 < 3/4.</div>",
+                kbc: "Menghargai keberagaman hasil bumi Gorontalo (padi dan jagung) sebagai ketahanan pangan.",
+                ayah: "يَرْفَعِ اللَّهُ الَّذِينَ آمَنُوا مِنكُمْ وَالَّذِينَ أُوتُوا الْعِلْمَ دَرَجَاتٍ",
+                trans: "\"Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu...\" (QS. Al-Mujadilah: 11)",
+                quiz: { q: "Bandingkan 1/4 dan 1/5!", opts: ["1/4 < 1/5", "1/4 > 1/5", "1/4 = 1/5", "Tidak bisa dibandingkan"], ans: 1 }
+            },
+            {
+                title: "10. Penjumlahan Pecahan (Penyebut Sama)",
+                content: "Dalam program penghijauan madrasah, siswa kelas V-A menanam 2/7 bagian area taman, dan kelas V-B menanam 3/7 bagian. Total area yang ditanami adalah 2/7 + 3/7 = 5/7 bagian. Jika penyebut sama, cukup jumlahkan pembilangnya.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 2/9 + 5/9.<br><strong>Pembahasan:</strong> Karena penyebutnya sudah sama, jumlahkan saja pembilangnya: 2 + 5 = 7. Hasilnya 7/9.</div>",
+                kbc: "Gotong royong (Ta'awun) dalam kebaikan adalah akhlak mulia.",
+                ayah: "وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ",
+                trans: "\"Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa, dan jangan tolong-menolong dalam berbuat dosa...\" (QS. Al-Ma'idah: 2)",
+                quiz: { q: "Hasil dari 3/8 + 4/8 adalah?", opts: ["7/16", "1/8", "7/8", "12/8"], ans: 2 }
+            },
+            {
+                title: "11. Penjumlahan Pecahan (Penyebut Beda)",
+                content: "Sebuah kapal mengangkut 1/2 ton kelapa dan 1/4 ton kopra. Total muatan kapal = 1/2 + 1/4. Samakan penyebutnya: 1/2 = 2/4. Maka, 2/4 + 1/4 = 3/4 ton. Ini sangat penting agar kapal nelayan tidak kelebihan muatan dan tenggelam.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 1/2 + 1/3.<br><strong>Pembahasan:</strong> Samakan penyebut menjadi 6 (KPK 2 dan 3). 1/2 = 3/6 dan 1/3 = 2/6. Lalu 3/6 + 2/6 = 5/6.</div>",
+                kbc: "Keselamatan nyawa dalam bekerja adalah prioritas utama (Hifdzun Nafs).",
+                ayah: "وَلَا تُلْقُوا بِأَيْدِيكُمْ إِلَى التَّهْلُكَةِ",
+                trans: "\"...dan janganlah kamu menjatuhkan dirimu sendiri ke dalam kebinasaan...\" (QS. Al-Baqarah: 195)",
+                quiz: { q: "Hasil 1/3 + 1/6 adalah?", opts: ["2/9", "3/6 (atau 1/2)", "1/18", "4/6"], ans: 1 }
+            },
+            {
+                title: "12. Pengurangan Pecahan",
+                content: "Luas area enceng gondok di perairan Danau Limboto adalah 7/8 bagian. Setelah warga bergotong royong membersihkannya, area yang tertutup berkurang 3/8 bagian. Sisa area yang tertutup adalah 7/8 - 3/8 = 4/8, yang bisa disederhanakan menjadi 1/2.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 4/5 - 1/5.<br><strong>Pembahasan:</strong> Penyebutnya sama, jadi kurangkan pembilangnya: 4 - 1 = 3. Hasilnya 3/5.</div>",
+                kbc: "Kebersihan adalah wujud cinta pada lingkungan yang asri.",
+                ayah: "إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ",
+                trans: "\"Sesungguhnya Allah menyukai orang-orang yang bertaubat dan menyukai orang-orang yang mensucikan diri.\" (QS. Al-Baqarah: 222)",
+                quiz: { q: "Hasil 5/6 - 2/6 disederhanakan menjadi?", opts: ["3/6", "1/2", "2/6", "4/6"], ans: 1 }
+            },
+            {
+                title: "13. Perkalian Pecahan",
+                content: "Seorang petani jagung ingin membayar Zakat. Ia memanen dari lahan yang luasnya 1/2 hektar. Setiap hektar menghasilkan 3/4 ton jagung. Total panennya adalah 1/2 x 3/4 = 3/8 ton. Perkalian pecahan: kalikan pembilang dengan pembilang, penyebut dengan penyebut.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 2/5 x 3/4.<br><strong>Pembahasan:</strong> Kalikan (atas x atas) dan (bawah x bawah) = (2 x 3) / (5 x 4) = 6/20. Disederhanakan bagi 2 = 3/10.</div>",
+                kbc: "Menunaikan zakat membersihkan harta dan bukti cinta kaum dhuafa.",
+                ayah: "وَآتُوا حَقَّهُ يَوْمَ حَصَادِهِ",
+                trans: "\"Dan berikanlah haknya (zakatnya) pada waktu memetik hasilnya.\" (QS. Al-An'am: 141)",
+                quiz: { q: "Hasil 2/3 x 4/5 adalah?", opts: ["8/15", "6/8", "8/8", "10/15"], ans: 0 }
+            },
+            {
+                title: "14. Pembagian Pecahan",
+                content: "Komunitas pesisir memiliki 3/4 ton pakan ikan. Pakan tersebut dibagi merata ke tambak kecil, masing-masing mendapat 1/8 ton. Banyak tambak = 3/4 : 1/8. Caranya balik pecahan kedua lalu kalikan: 3/4 x 8/1 = 24/4 = 6 tambak.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 2/3 : 1/5.<br><strong>Pembahasan:</strong> Balik pecahan kedua, lalu kalikan: 2/3 x 5/1 = 10/3 atau diubah menjadi pecahan campuran 3 1/3.</div>",
+                kbc: "Berbagi sumber daya pakan secara merata mendukung kesejahteraan bersama.",
+                ayah: "كَيْ لَا يَكُونَ دُولَةً بَيْنَ الْأَغْنِيَاءِ مِنكُمْ",
+                trans: "\"...supaya harta itu jangan beredar di antara orang-orang kaya saja di antara kamu...\" (QS. Al-Hasyr: 7)",
+                quiz: { q: "Hasil 1/2 : 1/4 adalah?", opts: ["1/8", "2", "4", "1/2"], ans: 1 }
+            },
+            {
+                title: "15. Evaluasi Konsep Desimal",
+                content: "Operasi pecahan dan desimal saling melengkapi. 0,5 + 0,2 = 0,7. Jika diubah ke pecahan: 5/10 + 2/10 = 7/10. Matematika mengajarkan kita bahwa berbagai bentuk dan cara bisa menghasilkan kebenaran yang sama, selama mematuhi aturan alam yang ditetapkan Allah.<div style='margin-top: 10px; padding: 12px; background: #e0f2fe; border-left: 4px solid #0284c7; border-radius: 6px; font-size: 0.95rem;'><strong>Contoh Soal:</strong> Hitung 0,3 + 0,15.<br><strong>Pembahasan:</strong> Sejajarkan letak koma, 0,30 + 0,15 = 0,45. Jika diubah ke pecahan: 30/100 + 15/100 = 45/100 = 9/20.</div>",
+                kbc: "Cinta ilmu pengetahuan mengantarkan manusia pada kebijaksanaan (Hikmah).",
+                ayah: "يُؤْتِي الْحِكْمَةَ مَن يَشَاءُ ۚ وَمَن يُؤْتَ الْحِكْمَةَ فَقَدْ أُوتِيَ خَيْرًا كَثِيرًا",
+                trans: "\"Allah menganugerahkan al hikmah (kefahaman yang dalam tentang Al Quran dan As Sunnah) kepada siapa yang dikehendaki-Nya...\" (QS. Al-Baqarah: 269)",
+                quiz: { q: "Hasil penjumlahan desimal 1,2 + 0,4 adalah?", opts: ["1,6", "0,16", "2,4", "1,24"], ans: 0 }
+            }
         ];
 
+        /* --- LOGIC: BELAJAR --- */
         function renderLearn() {
             const data = learnData[state.progress.learn];
             document.getElementById('learnProgress').innerText = `Slide ${state.progress.learn + 1} / 15`;
+            
             document.getElementById('learnContentBody').innerHTML = `
                 <h3 style="color: var(--primary-dark);">${data.title}</h3>
                 <div class="stimulus-text">${data.content}</div>
                 <div class="kbc-box"><strong>KBC:</strong> ${data.kbc}</div>
-                <div class="quran-box"><div class="arabic">${data.ayah}</div><p style="font-size: 0.85rem; color: #4b5563; margin-top: 5px;">${data.trans}</p></div>`;
+                <div class="quran-box">
+                    <div class="arabic">${data.ayah}</div>
+                    <p style="font-size: 0.85rem; color: #4b5563; margin-top: 5px;">${data.trans}</p>
+                </div>
+            `;
+            
             document.getElementById('learnQuizQ').innerText = data.quiz.q;
-            document.getElementById('learnQuizOptions').innerHTML = data.quiz.opts.map((opt, i) => `<button class="option-btn" onclick="checkLearnQuiz(${i}, ${data.quiz.ans}, this)">${opt}</button>`).join('');
+            document.getElementById('learnQuizOptions').innerHTML = data.quiz.opts.map((opt, i) => 
+                `<button class="option-btn" onclick="checkLearnQuiz(${i}, ${data.quiz.ans}, this)">${opt}</button>`
+            ).join('');
+            
             document.getElementById('btnLearnNext').disabled = true;
         }
 
         function checkLearnQuiz(selected, correct, btnElem) {
             const btns = document.getElementById('learnQuizOptions').querySelectorAll('.option-btn');
             btns.forEach(b => b.disabled = true);
+            
             if(selected === correct) {
-                btnElem.classList.add('correct'); showToast("Tepat Sekali! Lanjut ke slide berikutnya.");
+                btnElem.classList.add('correct');
+                showToast("Tepat Sekali! Lanjut ke slide berikutnya.");
+                document.getElementById('btnLearnNext').disabled = false;
             } else {
-                btnElem.classList.add('wrong'); btns[correct].classList.add('correct'); showToast("Kurang tepat, perhatikan jawaban yang benar.", false);
+                btnElem.classList.add('wrong');
+                btns[correct].classList.add('correct');
+                showToast("Kurang tepat, perhatikan jawaban yang benar.", false);
+                document.getElementById('btnLearnNext').disabled = false; // Allow learning to proceed
             }
-            document.getElementById('btnLearnNext').disabled = false;
         }
 
         function nextLearnSlide() {
-            if(state.progress.learn < 14) { state.progress.learn++; renderLearn(); } 
-            else { state.unlocked.play = true; showToast("Alhamdulillah! Menu BERMAIN telah terbuka."); navTo('screen-dashboard'); }
+            if(state.progress.learn < 14) {
+                state.progress.learn++;
+                renderLearn();
+            } else {
+                state.unlocked.play = true;
+                showToast("Alhamdulillah! Menu BERMAIN telah terbuka.");
+                navTo('screen-dashboard');
+            }
         }
 
+        /* === DATA: BERMAIN (30 Challenges - Mix of types, compacted for single file stability) === */
         const playData = [];
         const baseStimuli = [
-            "Pagi yang cerah di pesisir Teluk Tomini. Pak Hasan mendapat ikan Tuna 15,5 kg... Ia membagikan 3,5 kg. Sisa ikan Tuna?",
-            "Danau Limboto habitat penting. 3/8 bagian tertutup eceng gondok, 1/4 tertutup teratai. Total bagian tertutup vegetasi?",
-            "Kelompok pemuda membersihkan 2/3 bagian saluran irigasi, bapak-bapak 1/6 bagian. Berapa total yang dibersihkan?",
-            "Ibu Fatimah menyiapkan 2 1/2 kg jagung. Butuh 3/4 kg per panci. Berapa panci sup penuh?",
-            "Area konservasi utara 0,45 hektar, selatan 3/5 hektar. Ubahlah pecahan 3/5 menjadi desimal!",
-            "Ada 5 1/4 karung pupuk kompos dibagi rata ke 7 kelompok. Bagian per kelompok?",
-            "Ali membawa 4/5 L air, Budi membawa 0,75 L. Siapa yang bawa air lebih banyak di awal?",
-            "Hasil panen 120 kg. Sedekah 1/10, dijual 2/3, sisanya dikonsumsi keluarga. Berapa kg yang dikonsumsi?",
-            "Gabah basah 4,8 ton. Menyusut jadi 3/4 awalnya. Berat gabah kering?",
-            "Tersedia 18,5 liter minyak, dikemas ke botol 0,5 liter. Berapa banyak botol yang dikemas?"
+            "Pagi yang cerah di pesisir Teluk Tomini. Pak Hasan, seorang nelayan, baru merapat dengan hasil tangkapan. Ekosistem laut adalah anugerah Allah SWT yang wajib kita jaga kelestariannya. Ia mendapat ikan Tuna 15,5 kg dan ikan Cakalang 8,25 kg. Sebagai bentuk rasa syukur dan cinta sesama (KBC), ia membagikan 3,5 kg ikan Tuna kepada tetangganya yang sakit. Berapakah sisa ikan Tuna Pak Hasan sekarang?",
+            "Di Danau Limboto yang indah, burung migran mencari makan di perairan dangkal. Danau ini adalah habitat penting. Siswa MIN 1 Boalemo mencatat bahwa 3/8 bagian danau tertutup eceng gondok pelindung ekosistem, sedangkan 1/4 bagian tertutup teratai. Berapakah total bagian danau yang tertutup vegetasi jika digabungkan?",
+            "Menjaga kebersihan adalah iman. Warga desa agraris di Gorontalo bergotong royong membersihkan saluran irigasi sawah. Kelompok pemuda membersihkan 2/3 bagian, sedangkan bapak-bapak 1/6 bagian. Mereka saling melengkapi demi kesejahteraan bersama dan cinta tanah air. Berapa total saluran irigasi yang dibersihkan?",
+            "Ibu Fatimah menyiapkan Binthe Biluhuta untuk pengajian masjid (sup jagung tradisional Gorontalo). Ia memiliki 2 1/2 kg jagung pipil. Resepnya butuh 3/4 kg per panci. Berapa panci sup penuh yang bisa ia masak untuk dibagikan adil sebagai sedekah?",
+            "Hutan Nantu di Gorontalo adalah rumah Babi Rusa yang dilindungi. Menyayangi hewan langka adalah akhlak mulia. Tim peneliti memetakan area konservasi. Area utara luasnya 0,45 hektar, area selatan 3/5 hektar. Ubahlah pecahan 3/5 menjadi desimal agar tim mudah membandingkannya!",
+            "Koperasi Madrasah membagikan bibit pohon mangga untuk ditanam ('Madrasah Hijau'). Ada 5 1/4 karung pupuk kompos yang akan dibagi rata ke 7 kelompok kerja siswa. Berapakah bagian karung pupuk kompos yang diterima setiap kelompok?",
+            "Dalam karya wisata ke Benteng Otanaha, Ali membawa 4/5 liter air, Budi membawa 0,75 liter air. Cuaca terik membuat cepat haus. Ali berbagi airnya. Jika dibanding, siapa yang bawa air lebih banyak di awal?",
+            "Hasil panen tambak Pak Rahmat adalah 120 kg bandeng. Ia bersedekah 1/10 bagian untuk anak yatim, menjual 2/3 bagian, dan sisanya dikonsumsi keluarga. Agama mengajarkan tak lupa berbagi. Berapa kg ikan yang dikonsumsi keluarganya?",
+            "Desa Bone Bolango terkenal hasil buminya. Pak tani memanen 4,8 ton gabah basah. Setelah dijemur, beratnya menyusut jadi 3/4 dari awalnya karena kadar air menguap. Berapa ton berat gabah kering Pak Tani?",
+            "Jumat berkah, panitia membagikan sembako di pesisir Teluk Tomini. Sikap saling mengasihi ditekankan. Panitia punya minyak 18,5 liter, dikemas ke botol 0,5 liter. Berapa banyak botol yang dikemas?"
         ];
         const baseAns = [
-            { opts: ["11,5 kg", "12,0 kg", "12,5 kg", "13,0 kg"], ans: 1 }, { opts: ["4/12 bagian", "5/8 bagian", "4/8 bagian", "7/8 bagian"], ans: 1 },
-            { opts: ["3/9 bagian", "4/6 bagian", "5/6 bagian", "1 bagian"], ans: 2 }, { opts: ["2 panci", "3 panci", "4 panci", "5 panci"], ans: 1 },
-            { opts: ["0,35", "0,50", "0,60", "0,75"], ans: 2 }, { opts: ["3/4 karung", "1/2 karung", "4/7 karung", "5/7 karung"], ans: 0 },
-            { opts: ["Ali (4/5 L)", "Budi (0,75 L)", "Keduanya sama", "Tidak tahu"], ans: 0 }, { opts: ["12 kg", "28 kg", "80 kg", "30 kg"], ans: 1 },
-            { opts: ["3,2 ton", "3,6 ton", "4,0 ton", "4,2 ton"], ans: 1 }, { opts: ["35 botol", "36 botol", "37 botol", "38 botol"], ans: 2 }
+            { opts: ["11,5 kg", "12,0 kg", "12,5 kg", "13,0 kg"], ans: 1 }, // 15.5 - 3.5 = 12
+            { opts: ["4/12 bagian", "5/8 bagian", "4/8 bagian", "7/8 bagian"], ans: 1 }, // 3/8 + 2/8 = 5/8
+            { opts: ["3/9 bagian", "4/6 bagian", "5/6 bagian", "1 bagian"], ans: 2 }, // 4/6 + 1/6 = 5/6
+            { opts: ["2 panci", "3 panci", "4 panci", "5 panci"], ans: 1 }, // 2.5 / 0.75 = 3.33 -> 3 panci penuh
+            { opts: ["0,35", "0,50", "0,60", "0,75"], ans: 2 }, // 3/5 = 0.60
+            { opts: ["3/4 karung", "1/2 karung", "4/7 karung", "5/7 karung"], ans: 0 }, // 21/4 / 7 = 3/4
+            { opts: ["Ali (4/5 L)", "Budi (0,75 L)", "Keduanya sama", "Tidak tahu"], ans: 0 }, // 4/5 = 0.8
+            { opts: ["12 kg", "28 kg", "80 kg", "30 kg"], ans: 1 }, // 120 - 12 - 80 = 28
+            { opts: ["3,2 ton", "3,6 ton", "4,0 ton", "4,2 ton"], ans: 1 }, // 4.8 * 0.75 = 3.6
+            { opts: ["35 botol", "36 botol", "37 botol", "38 botol"], ans: 2 } // 18.5 / 0.5 = 37
         ];
+
+        // Loop to generate exactly 30 challenges
         for(let i=0; i<30; i++) {
             let bIdx = i % 10;
-            playData.push({ stimulus: `[Tantangan ${i+1}] ` + baseStimuli[bIdx], opts: baseAns[bIdx].opts, ans: baseAns[bIdx].ans });
+            playData.push({
+                stimulus: `[Tantangan ${i+1}] ` + baseStimuli[bIdx],
+                opts: baseAns[bIdx].opts,
+                ans: baseAns[bIdx].ans
+            });
         }
 
+        /* --- LOGIC: BERMAIN --- */
         function renderPlay() {
             const data = playData[state.progress.play];
             document.getElementById('playProgress').innerText = `Tantangan ${state.progress.play + 1} / 30`;
-            document.getElementById('playContentBody').innerHTML = `<div class="stimulus-text" style="border-left: 5px solid var(--accent);">${data.stimulus}</div><div class="options-grid" id="playOptions">${data.opts.map((opt, i) => `<button class="option-btn" onclick="checkPlayQuiz(${i}, ${data.ans}, this)">${opt}</button>`).join('')}</div>`;
+            
+            document.getElementById('playContentBody').innerHTML = `
+                <div class="stimulus-text" style="border-left: 5px solid var(--accent);">${data.stimulus}</div>
+                <div class="options-grid" id="playOptions">
+                    ${data.opts.map((opt, i) => `<button class="option-btn" onclick="checkPlayQuiz(${i}, ${data.ans}, this)">${opt}</button>`).join('')}
+                </div>
+            `;
             document.getElementById('btnPlayNext').style.display = 'none';
         }
 
         function checkPlayQuiz(selected, correct, btnElem) {
             const btns = document.getElementById('playOptions').querySelectorAll('.option-btn');
             btns.forEach(b => b.disabled = true);
+            
             if(selected === correct) {
-                btnElem.classList.add('correct'); state.scores.play += Math.round(100 / 30); showToast("Luar Biasa! Jawaban Benar.");
+                btnElem.classList.add('correct');
+                state.scores.play += Math.round(100 / 30); // Max ~100
+                showToast("Luar Biasa! Jawaban Benar.");
             } else {
-                btnElem.classList.add('wrong'); btns[correct].classList.add('correct'); showToast("Kurang tepat. Jangan menyerah!", false);
+                btnElem.classList.add('wrong');
+                btns[correct].classList.add('correct');
+                showToast("Kurang tepat. Jangan menyerah!", false);
             }
+            
             document.getElementById('btnPlayNext').style.display = 'block';
         }
 
         function nextPlaySlide() {
-            if(state.progress.play < 29) { state.progress.play++; renderPlay(); } 
-            else { state.unlocked.practice = true; showToast("Hebat! Zona Berlatih telah terbuka."); navTo('screen-dashboard'); }
+            if(state.progress.play < 29) { // 30 items (0-29)
+                state.progress.play++;
+                renderPlay();
+            } else {
+                state.unlocked.practice = true;
+                showToast("Hebat! Zona Berlatih telah terbuka.");
+                navTo('screen-dashboard');
+            }
         }
 
+        /* === DATA: BERLATIH (15 Questions - Tiered 100 Pts Total) === */
         const practiceData = [
-            { level: 1, pts: 5, stimulus: "Ladang dibagi 8 petak. 5 ditanami jagung, sisanya cabai. Pecahan luas cabai?", opts: ["5/8", "3/8", "1/8", "8/8"], ans: 1, pembahasan: "Total 8, jagung 5, sisa cabai = 8-5=3. Jadi 3/8." },
-            { level: 1, pts: 5, stimulus: "Jarak total 12,5 km. Sudah ditempuh 7,3 km. Jarak sisa?", opts: ["5,2 km", "4,8 km", "5,8 km", "4,2 km"], ans: 0, pembahasan: "12,5 - 7,3 = 5,2 km." },
-            { level: 1, pts: 5, stimulus: "Volume air 4/5 liter. Bentuk desimalnya?", opts: ["0,8 L", "0,75 L", "0,45 L", "0,4 L"], ans: 0, pembahasan: "4/5 = 8/10 = 0,8." },
-            { level: 1, pts: 5, stimulus: "Bentuk sederhana dari pecahan 15/20 adalah...", opts: ["3/5", "3/4", "4/5", "1/2"], ans: 1, pembahasan: "Bagi 5 atas bawah, 15:5=3, 20:5=4. Jadi 3/4." },
-            { level: 1, pts: 5, stimulus: "Pecahan campuran dari 11/4 adalah...", opts: ["2 3/4", "3 1/4", "2 1/4", "1 3/4"], ans: 0, pembahasan: "11 dibagi 4 = 2 sisa 3. Jadi 2 3/4." },
-            { level: 2, pts: 7, stimulus: "Putra menanam mangrove 1 1/2 km, putri 2 1/4 km. Total?", opts: ["3 1/4 km", "3 1/2 km", "3 3/4 km", "4 1/4 km"], ans: 2, pembahasan: "1,5 + 2,25 = 3,75 km (3 3/4 km)." },
-            { level: 2, pts: 7, stimulus: "Air turun 2/5 meter tiap bulan selama 4 bulan. Total penurunan?", opts: ["8/5 meter", "6/5 meter", "4/5 meter", "1/5 meter"], ans: 0, pembahasan: "2/5 x 4 = 8/5." },
-            { level: 2, pts: 7, stimulus: "Tepung sagu 3,75 kg. Dipakai 1,5 kg, diberikan 0,25 kg. Sisa?", opts: ["2,0 kg", "1,75 kg", "2,25 kg", "2,5 kg"], ans: 0, pembahasan: "3,75 - 1,5 - 0,25 = 2,0 kg." },
-            { level: 2, pts: 7, stimulus: "Dana konservasi 2/3 dari 150 juta. Berapa nominalnya?", opts: ["50 juta", "75 juta", "100 juta", "125 juta"], ans: 2, pembahasan: "2/3 x 150 = 100 juta." },
-            { level: 2, pts: 7, stimulus: "Tali 5 1/2 m dipotong 1/4 m. Banyak potongan?", opts: ["11 potong", "22 potong", "20 potong", "24 potong"], ans: 1, pembahasan: "11/2 : 1/4 = 11/2 x 4 = 22." },
-            { level: 3, pts: 8, stimulus: "Desa A menyetor 4 1/2 ton. Desa B menyetor 1 3/4 ton lebih sedikit dari A. Total keduanya?", opts: ["6 1/4 ton", "7 1/4 ton", "2 3/4 ton", "8 1/4 ton"], ans: 1, pembahasan: "B = 4 1/2 - 1 3/4 = 2 3/4. Total = 4 1/2 + 2 3/4 = 7 1/4." },
-            { level: 3, pts: 8, stimulus: "Beras 24 1/2 kg dibagi 1 3/4 kg per KK. Ada sisa 3 KK yang tak kebagian. Total KK seluruhnya?", opts: ["11 KK", "14 KK", "17 KK", "21 KK"], ans: 2, pembahasan: "24 1/2 : 1 3/4 = 14 KK. Ditambah 3 KK = 17 KK." },
-            { level: 3, pts: 8, stimulus: "Istri 1/8, anak pr 1/2, sisa utk laki-laki = 1,5 hektar. Total lahan?", opts: ["3 hektar", "4 hektar", "4,5 hektar", "6 hektar"], ans: 1, pembahasan: "Bagian laki = 3/8 = 1,5 Ha. Total = 1,5 x 8/3 = 4 Ha." },
-            { level: 3, pts: 8, stimulus: "Bak terisi 2/5, tambah 1/3, bocor 0,2 (1/5). Air sekarang?", opts: ["16/30 bagian", "8/15 bagian", "17/30 bagian", "1/2 bagian"], ans: 1, pembahasan: "2/5 + 1/3 - 1/5 = 6/15 + 5/15 - 3/15 = 8/15." },
-            { level: 3, pts: 8, stimulus: "Pupuk urea 2,5 kg dan TSP 1 3/4 kg. Dibagi ke 5 bedeng. Pupuk per bedeng?", opts: ["0,85 kg", "0,75 kg", "1,25 kg", "1,05 kg"], ans: 0, pembahasan: "4,25 : 5 = 0,85 kg." }
+            // Level 1: Dasar (1-5)
+            { level: 1, pts: 5, stimulus: "Masyarakat petani Gorontalo selalu bersyukur atas panen mereka. Pak Andi membagi ladangnya menjadi 8 petak yang sama besar. Ia menanami 5 petak dengan jagung (komoditas utama) dan sisanya ditanami cabai. Berapa nilai pecahan yang mewakili luas petak ladang yang ditanami cabai oleh Pak Andi?", opts: ["5/8", "3/8", "1/8", "8/8"], ans: 1, pembahasan: "Total petak 8. Ditanami jagung 5, sisa untuk cabai adalah 8 - 5 = 3 petak. Jadi pecahannya 3/8." },
+            { level: 1, pts: 5, stimulus: "Sebuah kapal nelayan berangkat dari pelabuhan Kota Gorontalo membelah ombak Teluk Tomini. Jarak ke spot memancing adalah 12,5 km. Nelayan tersebut telah menempuh jarak sejauh 7,3 km. Berapa kilometer lagi jarak yang harus ditempuh?", opts: ["5,2 km", "4,8 km", "5,8 km", "4,2 km"], ans: 0, pembahasan: "Sisa jarak = Jarak total - Jarak tempuh = 12,5 - 7,3 = 5,2 km." },
+            { level: 1, pts: 5, stimulus: "Sebuah botol berisi air murni dari sumber mata air Suwawa sebanyak 4/5 liter. Berapakah bentuk desimal dari volume air di dalam botol tersebut?", opts: ["0,8 L", "0,75 L", "0,45 L", "0,4 L"], ans: 0, pembahasan: "4/5 senilai dengan 8/10. Pecahan 8/10 ditulis dalam desimal menjadi 0,8." },
+            { level: 1, pts: 5, stimulus: "Bentuk sederhana dari pecahan 15/20 hasil tangkapan kepiting di pesisir adalah...", opts: ["3/5", "3/4", "4/5", "1/2"], ans: 1, pembahasan: "Bagi pembilang dan penyebut dengan bilangan yang sama (FPB yaitu 5). 15:5 = 3, dan 20:5 = 4. Hasilnya 3/4." },
+            { level: 1, pts: 5, stimulus: "Pecahan campuran dari 11/4 kuintal panen tomat adalah...", opts: ["2 3/4", "3 1/4", "2 1/4", "1 3/4"], ans: 0, pembahasan: "11 dibagi 4 sama dengan 2 sisa 3. Maka menjadi 2 3/4." },
+            // Level 2: Aplikasi (6-10)
+            { level: 2, pts: 7, stimulus: "Siswa MI bergotong royong menanam mangrove di pesisir Gorontalo. Kelompok putra menanam sepanjang 1 1/2 km, sedangkan kelompok putri menanam sepanjang 2 1/4 km. Berapa total panjang pesisir yang ditanami mangrove?", opts: ["3 1/4 km", "3 1/2 km", "3 3/4 km", "4 1/4 km"], ans: 2, pembahasan: "1 1/2 km = 1,5 km. 2 1/4 km = 2,25 km. Total = 1,5 + 2,25 = 3,75 km (atau 3 3/4 km)." },
+            { level: 2, pts: 7, stimulus: "Di kawasan Danau Limboto, volume air menyusut. Pada musim kemarau, permukaan air turun sebesar 2/5 meter setiap bulannya. Jika kemarau berlangsung selama 4 bulan penuh, total penurunan permukaan air danau adalah...", opts: ["8/5 meter", "6/5 meter", "4/5 meter", "1/5 meter"], ans: 0, pembahasan: "Total penurunan = Penurunan per bulan x Lama bulan = 2/5 x 4 = 8/5 meter." },
+            { level: 2, pts: 7, stimulus: "Ibu memiliki 3,75 kg tepung sagu. Ia menggunakan 1,5 kg untuk membuat kue basah dan 0,25 kg diberikan kepada tetangga (sikap cinta sesama). Berapa sisa tepung sagu yang dimiliki ibu sekarang?", opts: ["2,0 kg", "1,75 kg", "2,25 kg", "2,5 kg"], ans: 0, pembahasan: "Sisa = Total awal - (Yang digunakan + Diberikan tetangga) = 3,75 - 1,5 - 0,25 = 2,0 kg." },
+            { level: 2, pts: 7, stimulus: "Pemerintah daerah mengalokasikan dana pelestarian Burung Maleo sebesar 2/3 dari total anggaran konservasi. Jika total anggaran 150 juta, berapa nominal dana khusus untuk Burung Maleo?", opts: ["50 juta", "75 juta", "100 juta", "125 juta"], ans: 2, pembahasan: "Dana Maleo = 2/3 x 150 juta = 100 juta." },
+            { level: 2, pts: 7, stimulus: "Tali rapia sepanjang 5 1/2 meter akan dipotong-potong menjadi bagian yang panjangnya 1/4 meter untuk mengikat bibit cengkeh. Banyak potongan tali yang dihasilkan adalah...", opts: ["11 potong", "22 potong", "20 potong", "24 potong"], ans: 1, pembahasan: "Banyak potongan = 5 1/2 dibagi 1/4. 5 1/2 = 11/2. Maka 11/2 : 1/4 = 11/2 x 4/1 = 44/2 = 22 potong." },
+            // Level 3: HOTS (11-15)
+            { level: 3, pts: 8, stimulus: "Pabrik pengolahan kopra (kelapa kering) di Gorontalo menerima pasokan dari dua desa. Desa A menyetor 4 1/2 ton. Desa B menyetor 1 3/4 ton lebih sedikit dibanding Desa A. Hasil bumi dikelola adil demi kemakmuran bersama. Berapa total pasokan kelapa dari kedua desa tersebut?", opts: ["6 1/4 ton", "7 1/4 ton", "2 3/4 ton", "8 1/4 ton"], ans: 1, pembahasan: "Desa A = 4 1/2 ton. Desa B = 4 1/2 - 1 3/4 = 2 3/4 ton. Total = 4 1/2 + 2 3/4 = 7 1/4 ton." },
+            { level: 3, pts: 8, stimulus: "Sesuai anjuran Kemenag tentang gotong royong, relawan membagikan beras ke pulau terpencil di Teluk Tomini. Tersedia 24 1/2 kg beras. Setiap kepala keluarga (KK) menerima tepat 1 3/4 kg beras. Setelah dibagi merata, ternyata masih ada 3 KK yang belum mendapat bagian. Berapa total KK di pulau tersebut seluruhnya?", opts: ["11 KK", "14 KK", "17 KK", "21 KK"], ans: 2, pembahasan: "Jumlah KK penerima beras = 24 1/2 : 1 3/4 = 49/2 : 7/4 = 49/2 x 4/7 = 14 KK. Ditambah 3 KK yang belum dapat, total = 14 + 3 = 17 KK." },
+            { level: 3, pts: 8, stimulus: "Dalam ilmu waris Islam (Faraid), seorang petani mewariskan lahan. Istri mendapat 1/8 bagian, anak perempuan mendapat 1/2 bagian, dan sisanya untuk anak laki-laki. Jika luas lahan untuk anak laki-laki adalah 1,5 hektar, berapakah luas total lahan pertanian tersebut?", opts: ["3 hektar", "4 hektar", "4,5 hektar", "6 hektar"], ans: 1, pembahasan: "Bagian laki-laki = 1 - (1/8 + 1/2) = 1 - 5/8 = 3/8. Jika 3/8 bagian = 1,5 hektar, maka total = 1,5 : 3/8 = 1,5 x 8/3 = 4 hektar." },
+            { level: 3, pts: 8, stimulus: "Sebuah bak penampungan air hujan di desa tadah hujan Gorontalo terisi 2/5 bagian. Saat hujan deras berkat rahmat Allah, air bertambah 1/3 bagian. Namun karena ada kebocoran, air berkurang 0,2 bagian. Berapa bagian air di bak penampungan sekarang?", opts: ["16/30 bagian", "8/15 bagian", "17/30 bagian", "1/2 bagian"], ans: 1, pembahasan: "Air = 2/5 + 1/3 - 0,2 (atau 1/5). 2/5 + 1/3 = 6/15 + 5/15 = 11/15. Kemudian dikurang 1/5 (3/15). Sisa = 11/15 - 3/15 = 8/15." },
+            { level: 3, pts: 8, stimulus: "Untuk memupuk lahan jagung, Pak Budi mencampur 2,5 kg urea dan 1 3/4 kg TSP. Campuran pupuk tersebut digunakan pada 5 bedeng tanaman sama rata. Berapa kg campuran pupuk yang diterima setiap bedeng tanaman?", opts: ["0,85 kg", "0,75 kg", "1,25 kg", "1,05 kg"], ans: 0, pembahasan: "Total pupuk = 2,5 + 1,75 = 4,25 kg. Dibagi ke 5 bedeng = 4,25 : 5 = 0,85 kg/bedeng." }
         ];
 
+        /* --- LOGIC: BERLATIH --- */
         function renderPractice() {
             const data = practiceData[state.progress.practice];
             document.getElementById('practiceProgressText').innerText = `Soal ${state.progress.practice + 1} dari 15`;
             document.getElementById('practiceWeight').innerText = data.pts;
+            
             let badgeText = "Level 1: Dasar"; let badgeColor = "#3b82f6";
             if(data.level === 2) { badgeText = "Level 2: Aplikasi"; badgeColor = "#f59e0b"; }
             if(data.level === 3) { badgeText = "Level 3: HOTS"; badgeColor = "#ef4444"; }
+            
             const badge = document.getElementById('practiceBadge');
             badge.innerText = badgeText; badge.style.background = badgeColor;
-            document.getElementById('practiceContentBody').innerHTML = `<div class="stimulus-text" style="border-left: 5px solid ${badgeColor};">${data.stimulus}</div><div class="options-grid" id="practiceOptions">${data.opts.map((opt, i) => `<button class="option-btn" onclick="selectPractice(${i}, ${data.ans}, this, ${data.pts})">${opt}</button>`).join('')}</div>`;
+
+            document.getElementById('practiceContentBody').innerHTML = `
+                <div class="stimulus-text" style="border-left: 5px solid ${badgeColor};">${data.stimulus}</div>
+                <div class="options-grid" id="practiceOptions">
+                    ${data.opts.map((opt, i) => `<button class="option-btn" onclick="selectPractice(${i}, ${data.ans}, this, ${data.pts})">${opt}</button>`).join('')}
+                </div>
+            `;
             document.getElementById('btnPracticeNext').style.display = 'none';
         }
 
         function selectPractice(selected, correct, btnElem, pts) {
             const btns = document.getElementById('practiceOptions').querySelectorAll('.option-btn');
-            btns.forEach(b => { b.classList.remove('selected'); b.disabled = true; });
+            btns.forEach(b => {
+                b.classList.remove('selected');
+                b.disabled = true; // Lock answer after selecting
+            });
             btnElem.classList.add('selected');
+            
             state.currentPracticeSelected = selected;
             state.currentPracticePoints = (selected === correct) ? pts : 0;
             document.getElementById('btnPracticeNext').style.display = 'block';
@@ -627,103 +899,173 @@
 
         function nextPracticeSlide() {
             const data = practiceData[state.progress.practice];
-            const studentAnsText = data.opts[state.currentPracticeSelected];
-            const correctAnsText = data.opts[data.ans];
+            
+            // Evaluasi jawaban
             const isCorrect = state.currentPracticeSelected === data.ans;
-
-            // Simpan detail jawaban ke state GAS
-            state.allPracticeAnswers.push({
+            const userAns = state.currentPracticeSelected !== null ? data.opts[state.currentPracticeSelected] : "Tidak Dijawab";
+            
+            // Catat history lengkap untuk Google Sheets
+            state.practiceHistory.push({
                 q: data.stimulus,
-                studentAns: studentAnsText,
-                isCorrect: isCorrect
+                userAns: userAns,
+                correctAns: data.opts[data.ans],
+                status: isCorrect ? "Benar" : "Salah"
             });
 
-            // Catat salah untuk pembahasan frontend
+            // Catat jawaban salah untuk dibahas pada form PDF
             if (!isCorrect) {
-                state.incorrectPractice.push({ q: data.stimulus, wrongAns: studentAnsText, correctAns: correctAnsText, pembahasan: data.pembahasan });
+                state.incorrectPractice.push({
+                    q: data.stimulus,
+                    wrongAns: userAns,
+                    correctAns: data.opts[data.ans],
+                    pembahasan: data.pembahasan
+                });
             }
 
             state.scores.practice += state.currentPracticePoints;
             
             if(state.progress.practice < 14) {
                 state.progress.practice++;
+                state.currentPracticeSelected = null; // Reset selection
                 renderPractice();
             } else {
-                // Selesai, kirim ke server GAS
-                sendDataToGAS();
+                // Semua soal selesai, submit ke backend (GAS)
+                submitDataToGAS();
             }
         }
 
-        /* === FUNGSI KIRIM DATA KE GOOGLE APPS SCRIPT === */
-        function sendDataToGAS() {
-            if (GAS_URL === "URL_GAS_ANDA_DISINI") {
-                showToast("URL GAS belum di-setting! Menampilkan Laporan Offline.", false);
+        /* === LOGIC: SUBMIT TO GOOGLE APPS SCRIPT === */
+        function submitDataToGAS() {
+            if (!GAS_URL || GAS_URL === "URL_GAS_ANDA_DISINI") {
+                console.warn("GAS_URL belum diatur. Melewati proses sinkronisasi database.");
                 navTo('screen-report');
                 renderReport();
                 return;
             }
 
-            showToast("Menyimpan data hasil belajar ke server...", true);
-            const correctCount = state.allPracticeAnswers.filter(a => a.isCorrect).length;
-            const wrongCount = 15 - correctCount;
+            // Membekukan UI sebentar untuk proses penyimpanan
+            document.getElementById('btnPracticeNext').disabled = true;
+            document.getElementById('btnPracticeNext').innerText = "Menyimpan Data...";
+            showToast("Menyinkronkan data dengan server...", true);
+
+            // Siapkan Data Soal (Digabung dari Bermain & Berlatih untuk menginisialisasi sheet Data Soal)
+            const soalData = [];
+            playData.forEach(item => {
+                soalData.push({ kategori: "Bermain", level: "-", soal: item.stimulus, opsi: item.opts.join(" | "), kunci: item.opts[item.ans] });
+            });
+            practiceData.forEach(item => {
+                let lvl = item.level === 1 ? "Dasar" : (item.level === 2 ? "Aplikasi" : "HOTS");
+                soalData.push({ kategori: "Berlatih", level: lvl, soal: item.stimulus, opsi: item.opts.join(" | "), kunci: item.opts[item.ans] });
+            });
+
+            // Hitung total benar dan salah
+            const benar = state.practiceHistory.filter(x => x.status === "Benar").length;
+            const salah = state.practiceHistory.length - benar;
 
             const payload = {
-                student: { name: state.student.name, class: state.student.class },
-                summary: { correct: correctCount, wrong: wrongCount, score: state.scores.practice },
-                details: state.allPracticeAnswers,
-                questions: { play: playData, practice: practiceData }
+                type: "submit_hasil",
+                nama: state.student.name,
+                kelas: state.student.class,
+                benar: benar,
+                salah: salah,
+                skorBermain: state.scores.play > 100 ? 100 : state.scores.play,
+                skorBerlatih: state.scores.practice,
+                detail: state.practiceHistory,
+                soalData: soalData
             };
 
-            // Fetch POST dengan mode text/plain untuk bypass CORS
             fetch(GAS_URL, {
                 method: "POST",
+                // Menggunakan text/plain agar tidak terblokir masalah CORS Preflight
                 headers: { "Content-Type": "text/plain;charset=utf-8" },
                 body: JSON.stringify(payload)
-            }).then(response => {
-                showToast("Data berhasil disimpan ke Spreadsheet!");
-                navTo('screen-report');
-                renderReport();
-            }).catch(err => {
-                console.error(err);
-                showToast("Gagal menyimpan data ke server. Menampilkan laporan offline.", false);
+            })
+            .then(res => res.json())
+            .then(data => {
+                if (data.result === "success") {
+                    showToast("Data berhasil direkam ke Google Sheets!");
+                } else {
+                    showToast("Gagal menyimpan data ke database.", false);
+                    console.error("Kesalahan GAS:", data.error);
+                }
+            })
+            .catch(err => {
+                showToast("Terjadi kesalahan jaringan saat menyimpan data.", false);
+                console.error("Network Error:", err);
+            })
+            .finally(() => {
+                // Lanjutkan ke menu Rapor apapun hasil network requestnya
                 navTo('screen-report');
                 renderReport();
             });
         }
 
+        /* === LOGIC: LAPORAN === */
         function renderReport() {
-            document.getElementById('repName').innerText = state.student.name; document.getElementById('repClass').innerText = state.student.class;
-            const now = new Date(); const dateStr = `${now.getDate()} ${now.toLocaleString('id-ID', { month: 'long' })} ${now.getFullYear()}`;
-            document.getElementById('repDate').innerText = dateStr; document.getElementById('repSignDate').innerText = dateStr;
+            document.getElementById('repName').innerText = state.student.name;
+            document.getElementById('repClass').innerText = state.student.class;
+            
+            const now = new Date();
+            const dateStr = `${now.getDate()} ${now.toLocaleString('id-ID', { month: 'long' })} ${now.getFullYear()}`;
+            document.getElementById('repDate').innerText = dateStr;
+            document.getElementById('repSignDate').innerText = dateStr;
+
             document.getElementById('repPlayScore').innerText = `${state.scores.play > 100 ? 100 : state.scores.play} / 100`;
             document.getElementById('repPracticeScore').innerText = `${state.scores.practice} / 100`;
 
-            let predikat = "Perlu Bimbingan"; let color = "var(--danger)";
+            let predikat = "Perlu Bimbingan";
+            let color = "var(--danger)";
             if(state.scores.practice >= 85) { predikat = "Sangat Baik (A) - Menguasai HOTS"; color = "var(--success)"; }
             else if(state.scores.practice >= 70) { predikat = "Baik (B) - Menguasai Aplikasi"; color = "var(--primary)"; }
             else if(state.scores.practice >= 55) { predikat = "Cukup (C) - Penguasaan Dasar"; color = "var(--accent)"; }
             
             const predEl = document.getElementById('repPredikat');
-            predEl.innerText = predikat; predEl.style.color = color;
+            predEl.innerText = predikat;
+            predEl.style.color = color;
 
+            // Render soal salah & pembahasan
             let incHtml = '';
             if (state.incorrectPractice.length > 0) {
-                incHtml += '<h3 style="color: var(--danger); margin-top: 25px;">Evaluasi (Pembahasan Soal yang Salah)</h3><div style="font-size: 0.9rem; color: #4b5563;">';
-                state.incorrectPractice.forEach(item => {
-                    incHtml += `<div style="background: #fee2e2; border-left: 4px solid var(--danger); padding: 15px; margin-bottom: 15px; border-radius: 8px;"><p style="margin: 0 0 8px 0;"><strong>Soal:</strong> ${item.q}</p><p style="margin: 0; color: #991b1b;">Jawaban Siswa: ${item.wrongAns} | Kunci Jawaban: <strong>${item.correctAns}</strong></p><div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.1);"><p style="margin: 0; color: #065f46;"><strong>💡 Pembahasan:</strong> ${item.pembahasan}</p></div></div>`;
+                incHtml += '<h3 style="color: var(--danger); margin-top: 25px;">Evaluasi (Pembahasan Soal yang Salah)</h3>';
+                incHtml += '<div style="font-size: 0.9rem; color: #4b5563;">';
+                incHtml += '<p style="margin-bottom: 10px;"><em>Panduan bagi orang tua/wali untuk mengulang pembelajaran di rumah.</em></p>';
+                state.incorrectPractice.forEach((item, idx) => {
+                    incHtml += `
+                        <div style="background: #fee2e2; border-left: 4px solid var(--danger); padding: 15px; margin-bottom: 15px; border-radius: 8px;">
+                            <p style="margin: 0 0 8px 0;"><strong>Soal:</strong> ${item.q}</p>
+                            <p style="margin: 0; color: #991b1b;">Jawaban Siswa: ${item.wrongAns} | Kunci Jawaban: <strong>${item.correctAns}</strong></p>
+                            <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.1);">
+                                <p style="margin: 0; color: #065f46;"><strong>💡 Pembahasan:</strong> ${item.pembahasan}</p>
+                            </div>
+                        </div>
+                    `;
                 });
                 incHtml += '</div>';
             } else {
-                incHtml += `<h3 style="color: var(--success); margin-top: 25px;">Evaluasi</h3><div style="background: #d1fae5; border-left: 4px solid var(--success); padding: 15px; border-radius: 8px;"><p style="margin: 0; color: #065f46;">Luar biasa! Siswa berhasil menjawab seluruh soal dengan benar.</p></div>`;
+                incHtml += `
+                    <h3 style="color: var(--success); margin-top: 25px;">Evaluasi</h3>
+                    <div style="background: #d1fae5; border-left: 4px solid var(--success); padding: 15px; border-radius: 8px;">
+                        <p style="margin: 0; color: #065f46;">Luar biasa! Siswa berhasil menjawab seluruh soal dengan benar.</p>
+                    </div>
+                `;
             }
             document.getElementById('repIncorrectAnswers').innerHTML = incHtml;
         }
 
         function generatePDF() {
             const element = document.getElementById('pdfArea');
-            const opt = { margin: 10, filename: `Laporan_MPI_Matematika_${state.student.name.replace(/\s+/g, '_')}.pdf`, image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' } };
+            const opt = {
+                margin:       10,
+                filename:     `Laporan_MPI_Matematika_${state.student.name.replace(/\s+/g, '_')}.pdf`,
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true },
+                jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
             showToast("Mempersiapkan PDF, silakan tunggu...");
-            html2pdf().set(opt).from(element).save().then(() => { showToast("PDF Berhasil Diunduh!"); });
+            html2pdf().set(opt).from(element).save().then(() => {
+                showToast("PDF Berhasil Diunduh!");
+            });
         }
     </script>
 </body>
